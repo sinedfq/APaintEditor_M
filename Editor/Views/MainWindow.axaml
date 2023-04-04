@@ -48,7 +48,7 @@
 				</Grid>
 			</Border>
 			<Border Grid.Column="1" BorderBrush="Black" BorderThickness="2">
-				<ItemsControl Items="{Binding Shapes}">
+				<ItemsControl DragDrop.AllowDrop="True" Items="{Binding Shapes}" PointerPressed="PointerPressedOnCanvas">
 					<ItemsControl.ItemsPanel>
 						<ItemsPanelTemplate>
 							<Canvas Name="canvas" Width="{Binding $parent[Border].Width}" Height="{Binding $parent[Border].Height}"/>
